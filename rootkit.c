@@ -20,6 +20,9 @@
 //      this rootkit to Linux >= 3.0.
 
 
+// We simple ported it to kernel 3.14
+// Most of the functionality is working
+// Ahmed, Hisham, Marwan , Ahmed, Mina Misak and Lobna Farag
 #include <linux/kernel.h>
 #include <linux/module.h>
 #include <linux/init.h>
@@ -27,6 +30,15 @@
 #include <linux/sched.h>
 #include <linux/proc_fs.h>
 #include <linux/version.h>
+MODULE_AUTHOR("Matías Fontanini");
+MODULE_AUTHOR("Dhiru Kholia");
+MODULE_AUTHOR("Ahmed H. Ismail");  
+MODULE_AUTHOR("Marwan Derwey");
+MODULE_AUTHOR("Hisham");
+MODULE_AUTHOR("Ahmed");
+MODULE_AUTHOR("Mina Misak");
+MODULE_AUTHOR("Lobna Farag");
+MODULE_DESCRIPTION("Port of the https://github.com/mfontanini/Programs-Scripts/blob/master/rootkit/rootkit.c rootkit to kernel 3.14");
 
 // THEY HID THIS STRUCT IN THE INTERNAL HEADERS !
 // THOSE BASTARDOS !
